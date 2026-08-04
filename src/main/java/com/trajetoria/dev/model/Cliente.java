@@ -1,0 +1,67 @@
+package com.trajetoria.dev.model;
+
+public class Cliente {
+    private Long id;
+    private String nome;
+    private String email;
+    private String cpf;
+    private String corFavorita;
+    private String tamanhoSapato;
+    private String criadoEm;
+
+    public String getCorFavorita() {
+        return corFavorita;
+    }
+
+    public void setCorFavorita(String corFavorita) {
+        this.corFavorita = corFavorita;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getTamanhoSapato() {
+        return tamanhoSapato;
+    }
+
+    public void setTamanhoSapato(String tamanhoSapato) {
+        this.tamanhoSapato = tamanhoSapato;
+    }
+
+    public String getCriadoEm() {
+        return criadoEm;
+    }
+
+    public void setCriadoEm(String criadoEm) {
+        this.criadoEm = criadoEm;
+    }
+}
