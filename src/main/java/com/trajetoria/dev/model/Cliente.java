@@ -1,77 +1,47 @@
 package com.trajetoria.dev.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Cliente {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private String email;
     private String cpf;
-    private String corFavorita;
-    private String tamanhoSapato;
+    private String senha;
+    private LocalDate dataNascimento;
+
+    @Enumerated(EnumType.STRING)
+    private StatusCliente status;
+
     private String criadoEm;
 
-    public String getCorFavorita() {
-        return corFavorita;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public void setCorFavorita(String corFavorita) {
-        this.corFavorita = corFavorita;
-    }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public Long getId() {
-        return id;
-    }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
 
-    public String getNome() {
-        return nome;
-    }
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public LocalDate getDataNascimento() { return dataNascimento; }
+    public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
 
-    public String getEmail() {
-        return email;
-    }
+    public StatusCliente getStatus() { return status; }
+    public void setStatus(StatusCliente status) { this.status = status; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getTamanhoSapato() {
-        return tamanhoSapato;
-    }
-
-    public void setTamanhoSapato(String tamanhoSapato) {
-        this.tamanhoSapato = tamanhoSapato;
-    }
-
-    public String getCriadoEm() {
-        return criadoEm;
-    }
-
-    public void setCriadoEm(String criadoEm) {
-        this.criadoEm = criadoEm;
-    }
+    public String getCriadoEm() { return criadoEm; }
+    public void setCriadoEm(String criadoEm) { this.criadoEm = criadoEm; }
 }
